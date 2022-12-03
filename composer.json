@@ -1,0 +1,42 @@
+{
+    "name": "serdud/socialite-google-one-tap",
+    "description": "Google One Tap provider for Laravel Socialite",
+    "keywords": [
+        "laravel",
+        "socialite",
+        "google",
+        "provider"
+    ],
+    "homepage": "https://github.com/serdud/socialite-google-one-tap",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "serdud",
+            "email": "serdud@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "illuminate/support": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+        "laravel/socialite": "~5.0",
+        "google/apiclient": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Serdud\\SocialiteGoogleOneTap\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Serdud\\SocialiteGoogleOneTap\\SocialiteGoogleOneTapServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
