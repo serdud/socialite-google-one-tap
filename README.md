@@ -24,7 +24,7 @@ composer require serdud/socialite-google-one-tap
 You should now be able to use the provider like you would regularly use Socialite:
 
 ```php
-return Socialite::driver('googleot')->stateless()->userFromToken($token);
+return Socialite::driver('google')->stateless()->userFromToken($token);
 ```
 
 > **Note**  
@@ -37,6 +37,8 @@ return Socialite::driver('googleot')->stateless()->userFromToken($token);
 - ``name``
 - ``email``
 - ``avatar``
+- ``given_name``
+- ``family_name``
 
 ## Credits
 
