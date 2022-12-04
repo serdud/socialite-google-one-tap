@@ -28,8 +28,9 @@ class SocialiteGoogleOneTap extends AbstractProvider implements ProviderInterfac
     protected function getUserByToken($token): array
     {
         $client = $this->getClient();
+        $info = $client->verifyIdToken($token);
 
-        return $client->verifyIdToken($token) ?? [];
+        return $info !== false ? $info : [];
     }
 
     /**
