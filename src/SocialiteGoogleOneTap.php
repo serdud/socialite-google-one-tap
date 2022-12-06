@@ -24,13 +24,17 @@ class SocialiteGoogleOneTap extends AbstractProvider implements ProviderInterfac
      * @param $token
      *
      * @return array
+     * @throws InvalidTokenException
      */
     protected function getUserByToken($token): array
     {
         $client = $this->getClient();
         $info = $client->verifyIdToken($token);
+        if (!$info) {
+            throw new InvalidTokenException('Invalid token');
+        }
 
-        return $info !== false ? $info : [];
+        return $info;
     }
 
     /**
