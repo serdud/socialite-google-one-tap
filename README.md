@@ -29,6 +29,7 @@ return Socialite::driver('google-one-tap')->stateless()->userFromToken($token);
 
 > **Note**
 > The token is returned in the `credential` field
+> Use `google` driver name if you're using version < 2.0.0
 
 ### Returned User fields
 
@@ -43,6 +44,7 @@ return Socialite::driver('google-one-tap')->stateless()->userFromToken($token);
 ## Credits
 
 - [serdud](https://github.com/serdud)
+- [All Contributors](../../contributors)
 
 ## License
 
