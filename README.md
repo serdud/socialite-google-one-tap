@@ -26,10 +26,11 @@ You should now be able to use the provider like you would regularly use Socialit
 ```php
 return Socialite::driver('google-one-tap')->stateless()->userFromToken($token);
 ```
+> **Note**
+> Use `google` driver name if you're using version < 2.0.0
 
 > **Note**
 > The token is returned in the `credential` field
-> Use `google` driver name if you're using version < 2.0.0
 
 ### Returned User fields
 
