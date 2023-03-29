@@ -12,10 +12,10 @@ composer require serdud/socialite-google-one-tap
 ### Add configuration to `config/services.php`
 
 ```php
-'google' => [    
-  'client_id' => env('GOOGLE_CLIENT_ID'),  
-  'client_secret' => env('GOOGLE_CLIENT_SECRET'),  
-  'redirect' => env('GOOGLE_REDIRECT_URI') 
+'google' => [
+  'client_id' => env('GOOGLE_CLIENT_ID'),
+  'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+  'redirect' => env('GOOGLE_REDIRECT_URI')
 ],
 ```
 
@@ -24,21 +24,21 @@ composer require serdud/socialite-google-one-tap
 You should now be able to use the provider like you would regularly use Socialite:
 
 ```php
-return Socialite::driver('google')->stateless()->userFromToken($token);
+return Socialite::driver('google-one-tap')->stateless()->userFromToken($token);
 ```
 
-> **Note**  
-> The token is returned in the ```credential``` field
+> **Note**
+> The token is returned in the `credential` field
 
 ### Returned User fields
 
-- ``id``
-- ``nickname``
-- ``name``
-- ``email``
-- ``avatar``
-- ``given_name``
-- ``family_name``
+- `id`
+- `nickname`
+- `name`
+- `email`
+- `avatar`
+- `given_name`
+- `family_name`
 
 ## Credits
 

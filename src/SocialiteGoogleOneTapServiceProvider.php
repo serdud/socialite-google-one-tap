@@ -19,7 +19,7 @@ class SocialiteGoogleOneTapServiceProvider extends ServiceProvider
         $socialite = $this->app->make(Factory::class);
 
         $socialite->extend(
-            'google',
+            'google-one-tap',
             fn() => $socialite->buildProvider(SocialiteGoogleOneTap::class, config('services.google')),
         );
     }
